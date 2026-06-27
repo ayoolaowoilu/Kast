@@ -5,11 +5,11 @@ export async function GET() {
     (
       <div
         style={{
-          background: "#FFFFFF",
+          background: "#FFFFFF", // White background
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "row", // Horizontal layout for the logo parts
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "sans-serif",
@@ -26,14 +26,13 @@ export async function GET() {
           }}
         />
 
-        {/* Black text for 'ast' - Font size reduced to 120 */}
+        {/* Black text for 'ast' */}
         <div
           style={{
-            fontSize: 120, // Reduced from 200
+            fontSize: 200,
             fontWeight: 900,
-            color: "#000000",
+            color: "#000000", // Black text
             marginLeft: "10px",
-            marginTop: "30px", // Adjusted top margin to align with the K
             letterSpacing: "-0.05em",
           }}
         >

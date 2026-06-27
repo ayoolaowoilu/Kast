@@ -5,42 +5,38 @@ export async function GET() {
     (
       <div
         style={{
-          background: "#EF4444",
+          background: "#FFFFFF", // White background
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row", // Horizontal layout for the logo parts
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "sans-serif",
         }}
       >
-        {/* Consolidated Logo: "kast" with 3D effect */}
+        {/* Remote Image for the K */}
+        <img
+          src="https://kast-ochre.vercel.app/logo.png"
+          alt="K"
+          style={{
+            width: "180px",
+            height: "180px",
+            objectFit: "contain",
+          }}
+        />
+
+        {/* Black text for 'ast' */}
         <div
           style={{
             fontSize: 200,
             fontWeight: 900,
-            color: "#FFFFFF",
-            // The hard red shadow to create the 3D effect across the full word
-            textShadow: "12px 12px 0px #B91C1C",
+            color: "#000000", // Black text
+            marginLeft: "10px",
             letterSpacing: "-0.05em",
-            marginBottom: "30px",
           }}
         >
-          kast
-        </div>
-
-        {/* Tagline */}
-        <div
-          style={{
-            fontSize: 40,
-            fontWeight: 600,
-            color: "#FFFFFF", // Changed to white for better readability
-            opacity: 0.9,
-            letterSpacing: "-0.02em",
-          }}
-        >
-          Stream together. No matter where.
+          ast
         </div>
       </div>
     ),

@@ -15,27 +15,31 @@ export async function GET() {
           fontFamily: "sans-serif",
         }}
       >
-        {/* The 'K' 3D effect */}
+        {/* Consolidated Logo: "kast" with 3D effect */}
         <div
           style={{
-            fontSize: 220,
+            fontSize: 200,
             fontWeight: 900,
             color: "#FFFFFF",
-            textShadow: "10px 10px 0px #B91C1C",
-            lineHeight: 1,
-            marginBottom: "20px",
+            // The hard red shadow to create the 3D effect across the full word
+            textShadow: "12px 12px 0px #B91C1C",
+            letterSpacing: "-0.05em",
+            marginBottom: "30px",
           }}
         >
-          K
-        </div>
-
-        {/* Brand Name */}
-        <div style={{ fontSize: 80, fontWeight: 900, color: "#FFFFFF" }}>
           kast
         </div>
 
         {/* Tagline */}
-        <div style={{ fontSize: 36, fontWeight: 600, color: "#FECACA", marginTop: "10px" }}>
+        <div
+          style={{
+            fontSize: 40,
+            fontWeight: 600,
+            color: "#FFFFFF", // Changed to white for better readability
+            opacity: 0.9,
+            letterSpacing: "-0.02em",
+          }}
+        >
           Stream together. No matter where.
         </div>
       </div>

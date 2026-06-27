@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Kast',
     description: 'Online watch party platform.',
-    images: ['/og-img'], // MUST match the filename above
+    images: ['https://kast-ochre.vercel.app/api/og'], // MUST match the filename above
   },
 };
 

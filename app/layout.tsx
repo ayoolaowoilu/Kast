@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: 'Kast',
     images: [
       {
-        url: '/og-img', // This must match the filename (without .tsx)
+        url: 'https://kast-ochre.vercel.app/api/og', // This must match the filename (without .tsx)
         width: 1200,
         height: 630,
       },

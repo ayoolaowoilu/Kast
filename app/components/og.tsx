@@ -1,18 +1,14 @@
 import { ImageResponse } from "next/og";
 
-// Route segment config
-export const runtime = "edge";
 
-// Image metadata
-export const alt = "Kast - The Ultimate Watch Party";
-export const size = {
+
+ const size = {
   width: 1200,
   height: 630,
 };
 
-export const contentType = "image/png";
 
-export default async function Image() {
+export function Image() {
   return new ImageResponse(
     (
       <div
@@ -36,7 +32,7 @@ export default async function Image() {
             gap: "20px",
           }}
         >
-          {/* Recreating the 3D 'K' from kast_3d_logo.png */}
+
           <div
             style={{
               display: "flex",

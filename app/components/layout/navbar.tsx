@@ -1,0 +1,41 @@
+
+import { motion } from "framer-motion";
+import KastButton from "./button";
+
+import Logo from "../logo";
+
+export default function Navbar(){
+       
+    return   <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="fixed top-6 left-0 right-0 z-50 px-4 flex justify-center"
+      >
+        <nav className="bg-[#111]/80 backdrop-blur-md border border-white/10 rounded-full px-6 py-3 flex items-center justify-between w-full max-w-5xl shadow-2xl shadow-red-900/10">
+          <motion.div className="flex items-center gap-3 cursor-pointer" whileHover={{ scale: 1.05 }}>
+              <Logo />
+          </motion.div>
+          
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+            {["Features", "Experience", "Reviews"].map((item) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="hover:text-white transition-colors"
+                whileHover={{ y: -1 }}
+              >
+                {item}
+              </motion.a>
+            ))}
+          </div>
+          
+          <div className="flex items-center gap-3">
+            <div className="hidden sm:block">
+              <KastButton variant="outlined" size="sm">Log In</KastButton>
+            </div>
+            <KastButton size="sm">Get Started</KastButton>
+          </div>
+        </nav>
+      </motion.div>
+}

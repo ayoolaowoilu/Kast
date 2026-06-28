@@ -73,15 +73,15 @@ const staggerContainer = {
 
 export default function KastLandingPage() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden font-sans selection:bg-[#EF4444]/30">
+    <div className="min-h-screen bg-white text-[#0A0A0A] overflow-x-hidden font-sans selection:bg-[#EF4444]/20">
       
-      {/* Floating Dark Navbar */}
+      {/* Floating Light Navbar */}
      <Navbar />
 
       {/* Hero Section (Center Aligned, Cinematic) */}
       <section className="relative pt-48 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
-        {/* Glowing Background Blob */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#EF4444]/20 blur-[120px] rounded-full pointer-events-none" />
+        {/* Soft Red Glow Background */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#EF4444]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           variants={staggerContainer}
@@ -98,15 +98,15 @@ export default function KastLandingPage() {
             </span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Create a private theater in seconds. Invite your friends, sync your favorite shows perfectly, and react in real-time.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <KastButton size="lg" className="shadow-[0_0_40px_rgba(239,68,68,0.4)] hover:scale-105 transition-transform">
+            <KastButton size="lg" className="shadow-[0_8px_30px_rgba(239,68,68,0.25)] hover:scale-105 transition-transform">
               <Play className="w-5 h-5" fill="currentColor" /> Start Watching Free
             </KastButton>
-            <KastButton variant="secondary" size="lg" className="border-white/20 hover:bg-white/10">
+            <KastButton variant="secondary" size="lg" className="border-black/10 hover:bg-black/5">
               <Users className="w-5 h-5" fill="currentColor" /> Join a Room
             </KastButton>
           </motion.div>
@@ -119,35 +119,35 @@ export default function KastLandingPage() {
           transition={{ duration: 1, delay: 0.4, type: "spring", stiffness: 100 }}
           className="mt-20 relative w-full max-w-5xl z-10"
         >
-          <div className="absolute -inset-1 bg-linear-to-r from-[#EF4444] to-rose-600 rounded-2xl blur opacity-30" />
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+          <div className="absolute -inset-1 bg-linear-to-r from-[#EF4444] to-rose-600 rounded-2xl blur opacity-20" />
+          <div className="relative rounded-2xl overflow-hidden border border-black/10 shadow-2xl bg-white">
             {/* Mockup Top Bar */}
-            <div className="flex items-center px-4 py-3 border-b border-white/10 bg-[#111]">
+            <div className="flex items-center px-4 py-3 border-b border-black/10 bg-[#FAFAFA]">
               <div className="flex gap-1.5">
                 <div className="w-3 h-3 rounded-full bg-red-500" />
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
               </div>
-              <div className="mx-auto bg-white/5 rounded-md px-4 py-1 text-xs text-gray-500 flex items-center gap-2">
+              <div className="mx-auto bg-black/5 rounded-md px-4 py-1 text-xs text-gray-500 flex items-center gap-2">
                 <Shield className="w-3 h-3" fill="currentColor" /> kast.app/room/movie-night
               </div>
             </div>
             <img
               src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&h=600&fit=crop"
               alt="Platform Interface"
-              className="w-full h-auto object-cover opacity-90"
+              className="w-full h-auto object-cover"
             />
           </div>
         </motion.div>
       </section>
 
       {/* Partners Marquee */}
-      <section className="py-10 border-y border-white/5 bg-white/2">
+      <section className="py-10 border-y border-black/5 bg-[#FAFAFA]">
         <div className="max-w-7xl mx-auto px-6 overflow-hidden flex flex-col items-center">
           <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Seamlessly integrates with</p>
-          <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
             {["NETFLIX", "DISNEY+", "PRIME VIDEO", "HULU", "HBO MAX", "YOUTUBE"].map((brand) => (
-              <span key={brand} className="text-xl md:text-2xl font-black tracking-tighter text-white hover:text-[#EF4444] transition-colors">
+              <span key={brand} className="text-xl md:text-2xl font-black tracking-tighter text-[#0A0A0A] hover:text-[#EF4444] transition-colors">
                 {brand}
               </span>
             ))}
@@ -159,81 +159,81 @@ export default function KastLandingPage() {
       <section id="features" className="py-32 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">Everything you need for the <br/><span className="text-[#EF4444]">perfect watch party</span></h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">No clunky screen sharing. Just pristine, synchronized playback with built-in comms.</p>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">No clunky screen sharing. Just pristine, synchronized playback with built-in comms.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
           {/* Feature 1: Large Card */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-2 bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-3xl p-8 relative overflow-hidden group"
+            className="md:col-span-2 bg-gradient-to-br from-[#FFF1F0] to-white border border-black/5 rounded-3xl p-8 relative overflow-hidden group shadow-sm"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#EF4444]/10 rounded-full blur-3xl group-hover:bg-[#EF4444]/20 transition-all" />
             <div className="relative z-10 h-full flex flex-col justify-end">
-              <div className="w-14 h-14 bg-red-500/20 text-[#EF4444] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-red-500/10 text-[#EF4444] rounded-2xl flex items-center justify-center mb-6">
                 <Zap className="w-7 h-7" fill="currentColor" />
               </div>
               <h3 className="text-3xl font-bold mb-2">Frame-Perfect Sync</h3>
-              <p className="text-gray-400 max-w-md">When you pause to grab popcorn, it pauses for everyone. Complete synchronization ensures no one misses a reaction.</p>
+              <p className="text-gray-600 max-w-md">When you pause to grab popcorn, it pauses for everyone. Complete synchronization ensures no one misses a reaction.</p>
             </div>
           </motion.div>
 
           {/* Feature 2: Small Card */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="bg-gradient-to-bl from-white/5 to-transparent border border-white/10 rounded-3xl p-8 flex flex-col justify-end"
+            className="bg-gradient-to-bl from-[#FFF1F0] to-white border border-black/5 rounded-3xl p-8 flex flex-col justify-end shadow-sm"
           >
-            <div className="w-12 h-12 bg-rose-500/20 text-rose-400 rounded-2xl flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-rose-500/10 text-rose-500 rounded-2xl flex items-center justify-center mb-4">
               <MessageCircle className="w-6 h-6" fill="currentColor" />
             </div>
             <h3 className="text-2xl font-bold mb-2">Live Chat</h3>
-            <p className="text-gray-400 text-sm">Text, voice, and instant emoji reactions overlay.</p>
+            <p className="text-gray-600 text-sm">Text, voice, and instant emoji reactions overlay.</p>
           </motion.div>
 
           {/* Feature 3: Small Card */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="bg-gradient-to-tr from-white/5 to-transparent border border-white/10 rounded-3xl p-8 flex flex-col justify-end"
+            className="bg-gradient-to-tr from-[#FFF1F0] to-white border border-black/5 rounded-3xl p-8 flex flex-col justify-end shadow-sm"
           >
-            <div className="w-12 h-12 bg-orange-500/20 text-orange-400 rounded-2xl flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-4">
               <Shield className="w-6 h-6" fill="currentColor" />
             </div>
             <h3 className="text-2xl font-bold mb-2">100% Private</h3>
-            <p className="text-gray-400 text-sm">Invite-only rooms with end-to-end encryption.</p>
+            <p className="text-gray-600 text-sm">Invite-only rooms with end-to-end encryption.</p>
           </motion.div>
 
           {/* Feature 4: Large Card */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-2 bg-gradient-to-tl from-white/5 to-transparent border border-white/10 rounded-3xl p-8 relative overflow-hidden"
+            className="md:col-span-2 bg-gradient-to-tl from-[#FFF1F0] to-white border border-black/5 rounded-3xl p-8 relative overflow-hidden shadow-sm"
           >
             <div className="relative z-10 h-full flex flex-col justify-end">
-              <div className="w-14 h-14 bg-[#EF4444]/20 text-[#EF4444] rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-[#EF4444]/10 text-[#EF4444] rounded-2xl flex items-center justify-center mb-6">
                 <Monitor className="w-7 h-7" fill="currentColor" />
               </div>
               <h3 className="text-3xl font-bold mb-2">Zero Downloads Required</h3>
-              <p className="text-gray-400 max-w-md">Runs flawlessly in the browser. Share a link, friends click, and they are in the lobby instantly. No software bloat.</p>
+              <p className="text-gray-600 max-w-md">Runs flawlessly in the browser. Share a link, friends click, and they are in the lobby instantly. No software bloat.</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* The Experience (Dark split section) */}
-      <section id="experience" className="py-32 bg-[#0A0A0A] border-y border-white/5">
+      {/* The Experience (Light split section) */}
+      <section id="experience" className="py-32 bg-[#FAFAFA] border-y border-black/5">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <div className="absolute inset-0 bg-[#EF4444]/20 blur-[100px] rounded-full" />
+            <div className="absolute inset-0 bg-[#EF4444]/10 blur-[100px] rounded-full" />
             <img 
               src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&h=600&fit=crop" 
               alt="Friends watching together" 
-              className="relative rounded-3xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+              className="relative rounded-3xl border border-black/10 shadow-xl grayscale hover:grayscale-0 transition-all duration-700"
             />
           </div>
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-black leading-tight">
               Like you are sharing <br/>the same couch.
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-xl text-gray-600">
               We built Kast to bridge the gap. High-fidelity video paired with crisp voice comms creates an atmosphere that feels truly intimate.
             </p>
             <ul className="space-y-5">
@@ -249,7 +249,7 @@ export default function KastLandingPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-center gap-4 text-gray-300 font-medium"
+                  className="flex items-center gap-4 text-gray-700 font-medium"
                 >
                   <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3 text-white" fill="currentColor" />
@@ -263,8 +263,8 @@ export default function KastLandingPage() {
       </section>
 
       {/* Stats Counter */}
-      <section className="py-20 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
+      <section className="py-20 border-b border-black/5">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-black/10">
           {[
             { label: "Active Watchers", value: "2M+" },
             { label: "Rooms Created", value: "15M" },
@@ -272,7 +272,7 @@ export default function KastLandingPage() {
             { label: "Uptime", value: "99.9%" },
           ].map((stat, i) => (
             <div key={i} className="text-center px-4">
-              <h4 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-500 mb-2">
+              <h4 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#0A0A0A] to-[#EF4444] mb-2">
                 {stat.value}
               </h4>
               <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">{stat.label}</p>
@@ -283,17 +283,17 @@ export default function KastLandingPage() {
 
       {/* CTA Section */}
       <section className="py-32 px-6">
-        <div className="max-w-5xl mx-auto relative rounded-[3rem] overflow-hidden border border-white/10 p-16 md:p-24 text-center">
+        <div className="max-w-5xl mx-auto relative rounded-[3rem] overflow-hidden border border-black/10 p-16 md:p-24 text-center shadow-xl">
           {/* Animated Background Gradients */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#EF4444]/30 via-[#050505] to-rose-900/30 z-0" />
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-600/20 blur-[100px] rounded-full z-0" />
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#EF4444]/20 blur-[100px] rounded-full z-0" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#FFF1F0] via-white to-rose-50 z-0" />
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-red-500/15 blur-[100px] rounded-full z-0" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#EF4444]/15 blur-[100px] rounded-full z-0" />
           
           <div className="relative z-10 space-y-8">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tight text-[#0A0A0A]">
               Ready for movie night?
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Jump in right now. No credit card required, no messy downloads. Just you, your friends, and great cinema.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-8">
@@ -306,7 +306,7 @@ export default function KastLandingPage() {
         </div>
       </section>
 
-      {/* Dark Footer */}
+      {/* Light Footer */}
         <Footer />
     </div>
   );

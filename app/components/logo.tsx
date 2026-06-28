@@ -26,9 +26,9 @@ export default function Logo(){
         {/* Black text for 'ast' */}
         <div
           style={{
-            fontSize: 25,
+            fontSize: 23,
             fontWeight: 900,
-            color: "#fff", // Black text
+            color: "black", // Black text
             marginLeft: "5px",
             letterSpacing: "-0.05em",
             

@@ -29,7 +29,7 @@ export default function Logo(){
             fontSize: 23,
             fontWeight: 900,
             color: "black", // Black text
-            marginLeft: "2px",
+            marginLeft: "1px",
             letterSpacing: "-0.05em",
             
           }}

@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import KastButton from "./button";
 
 import Logo from "../logo";
+import { redirect } from "next/navigation";
 
 export default function Navbar(){
        
-    return   <motion.div
+    return  <div>
+          <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -31,10 +33,13 @@ export default function Navbar(){
           
           <div className="flex items-center gap-3">
             <div className="hidden sm:block">
-              <KastButton variant="outlined" size="sm">Log In</KastButton>
+              <KastButton onClick={()=>redirect("/auth")} variant="outlined" size="sm">Log In</KastButton>
             </div>
-            <KastButton size="sm">Get Started</KastButton>
+            <KastButton onClick={()=>redirect("/auth")} size="sm">Get Started</KastButton>
           </div>
         </nav>
       </motion.div>
-}
+    <div className="h-16" />
+    </div>
+
+          }

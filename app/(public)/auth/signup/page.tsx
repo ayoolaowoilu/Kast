@@ -17,10 +17,11 @@ export default function Page() {
                     
                     {/* Header */}
                     <div className="flex items-center justify-center gap-3 mb-8">
-                        <Logo />
-                        <h1 className="font-bold text-2xl sm:text-3xl">
+                           <h1 className="font-bold text-2xl sm:text-3xl">
                             Get started
                         </h1>
+                        <Logo />
+                     
                     </div>
 
                     {/* Google Login Button */}

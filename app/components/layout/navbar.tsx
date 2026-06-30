@@ -33,9 +33,9 @@ export default function Navbar(){
           
           <div className="flex items-center gap-3">
             <div className="hidden sm:block">
-              <KastButton onClick={()=>redirect("/auth")} variant="outlined" size="sm">Log In</KastButton>
+              <KastButton onClick={()=>redirect("/auth/signin")} variant="outlined" size="sm">Log In</KastButton>
             </div>
-            <KastButton onClick={()=>redirect("/auth")} size="sm">Get Started</KastButton>
+            <KastButton onClick={()=>redirect("/auth/signup")} size="sm">Get Started</KastButton>
           </div>
         </nav>
       </motion.div>

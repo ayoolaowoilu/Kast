@@ -4,6 +4,7 @@ import KastButton from "@/app/components/layout/button";
 import Footer from "@/app/components/layout/footer";
 import Navbar from "@/app/components/layout/navbar";
 import Logo from "@/app/components/logo";
+import { signIn } from "next-auth/react";
 
 
 export default function Page() {
@@ -18,13 +19,14 @@ export default function Page() {
                     <div className="flex items-center justify-center gap-3 mb-8">
                         <Logo />
                         <h1 className="font-bold text-2xl sm:text-3xl">
-                            Auth page
+                           Welcome back
                         </h1>
                     </div>
 
                     {/* Google Login Button */}
                     <button
                         type="button"
+                        onClick={()=>signIn("google")}
                         className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-400 transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                     >
                         <svg className="w-5 h-5" viewBox="0 0 24 24">

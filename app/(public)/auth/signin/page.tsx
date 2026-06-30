@@ -18,7 +18,7 @@ export default function Page() {
                     {/* Header */}
                     <div className="flex items-center justify-center gap-3 mb-8">
                          <h1 className="font-bold text-2xl sm:text-3xl">
-                           Welcome back
+                           Welcome back to
                         </h1>
                         <Logo />
                        

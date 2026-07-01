@@ -1,9 +1,7 @@
+import db from "@/app/lib/database";
 import NextAuth from "next-auth";
+
 import Google from "next-auth/providers/google";
-
-
-
-
 
 const handler = NextAuth({
       providers:[
@@ -16,8 +14,20 @@ const handler = NextAuth({
          maxAge:60 * 60 * 24 * 30
       },callbacks:{
          async signIn({account , profile}){
-              console.log(profile,account)
+            console.log(account,profile)
+              if(account?.provider === "google"){
+                         const [row]:any =   await db.query("SELECT * FROM users WHERE id = ?", [profile?.sub]);
+           
+          if (row.length === 0) {
+      
+            await db.query("INSERT INTO users(id,name,email,method,image) VALUE(?,?,?,?,?)",
+               [profile?.sub , profile?.name , profile?.email , account?.provider , profile?.picture]
+            )
+          }
             return true
+              }else{
+                  return true
+              }
          }
        
   

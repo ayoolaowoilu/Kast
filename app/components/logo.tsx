@@ -17,8 +17,8 @@ export default function Logo(){
           src="/logo.png"
           alt="K"
           style={{
-            width: "25px",
-            height: "25px",
+            width: "30px",
+            height: "30px",
             objectFit: "contain",
           }}
         />
@@ -26,7 +26,7 @@ export default function Logo(){
         {/* Black text for 'ast' */}
         <div
           style={{
-            fontSize: 23,
+            fontSize: 25,
             fontWeight: 900,
             color: "black", // Black text
             marginLeft: "1px",
